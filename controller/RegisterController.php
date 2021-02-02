@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-class InfoController
+class RegisterController
 {
     //render function with both $_GET and $_POST vars available if it would be needed.
     public function render(array $GET, array $POST)
@@ -103,6 +103,6 @@ class InfoController
 }
 
         //load the view
-        require 'View/register.php';
+        require 'view/register.php';
     }
 }

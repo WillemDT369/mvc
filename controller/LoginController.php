@@ -12,10 +12,10 @@ class LoginController
         session_start();
         
         // Check if the user is already logged in, if yes then redirect him to welcome page
-        if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-            header("location: homepage.php");
-            exit;
-        }
+       // if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+           // header("location: homepage.php");
+           // exit;
+       // }
         
         // Include config file
         require_once "config.php";
@@ -73,7 +73,7 @@ class LoginController
                                     $_SESSION["username"] = $username;                            
                                     
                                     // Redirect user to welcome page
-                                    header("location: pindex.php");
+                                    header("location: welcome.php");
                                 } else{
                                     // Display an error message if password is not valid
                                     $password_err = "The password you entered was not valid.";
@@ -97,6 +97,6 @@ class LoginController
         }
 
         //load the view
-        require 'View/login.php';
+        require 'view/login.php';
     }
 }
